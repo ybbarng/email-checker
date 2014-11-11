@@ -21,7 +21,7 @@ $(function() {
   function getEmails() {
     var emails = '';
     $('#email-list li.email').each(function() {
-      if ($(this).find('input.valid').val()) {
+      if ($(this).find('input.valid').prop('checked')) {
         emails += $(this).find('textarea.email').text() + '\n';
       }
     });
