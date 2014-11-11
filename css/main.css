@@ -13,14 +13,25 @@
 }
 
 #email-list li.email{
-  height: 30px;
-  margin-top: 10px;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+#email-list li.email.pass{
+  background-color: #BDFFBD;
+}
+
+#email-list li.email.unpass{
+  background-color: #FCC0C0;
 }
 
 #email-list li.email textarea {
   height: 30px;
   width: 600px;
   vertical-align: middle;
+  background-color:transparent;
 }
 
 input[type=checkbox]

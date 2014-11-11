@@ -17,7 +17,7 @@ Email.prototype.validate = function() {
 };
 
 Email.prototype.getHTML = function() {
-  return '<li class="email">' +
+  return '<li class="email' + (this.valid ? ' pass' : ' unpass') + '">' +
           '<textarea class="email">' + this.email + '</textarea>' +
           '<input type="checkbox" class="valid"' + (this.valid ? ' checked' : '') + '>' +
         '</li>';
