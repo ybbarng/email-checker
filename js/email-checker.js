@@ -1,4 +1,16 @@
 $(function() {
+  function validbox_click() {
+    console.log($(this).prop('checked'));
+    if ($(this).prop('checked')) {
+      $(this).parent().removeClass('unpass');
+      $(this).parent().addClass('pass');
+    }
+    else {
+      $(this).parent().removeClass('pass');
+      $(this).parent().addClass('unpass');
+    }
+  }
+
   function splitEmail() {
     var emails = [];
     $emailList = $('#email-list');
@@ -15,6 +27,7 @@ $(function() {
       for (var i = 0; i < emails.length; i++) {
         $emailList.append(emails[i].getHTML());
       }
+      $('input.valid').change(validbox_click);
     };
   }
 
