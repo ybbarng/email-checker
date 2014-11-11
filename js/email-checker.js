@@ -34,7 +34,7 @@ $(function() {
   function getEmails() {
     var emails = '';
     $('#email-list li.pass').each(function() {
-      emails += $(this).find('textarea.email').text() + '\n';
+      emails += $(this).find('textarea.email').val() + '\n';
     });
     return emails;
   }
