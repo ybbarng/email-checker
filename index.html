@@ -5,17 +5,20 @@
         <title>Email Checker</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/toastr.min.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-        <h1>Email Checker</h1>
-        <button id="validate">validate</button>
-        <button id="copy">copy</button>
-        <ul id="email-list">
-            <li class="email">
-                <textarea class="email"></textarea>
-                <input type="checkbox" class="valid">
-            </li>
-        </ul>
+    <body class="container">
+        <div class="center-block">
+            <h1>Email Checker</h1>
+            <button class="btn btn-primary btn-lg" id="validate">validate</button>
+            <button class="btn btn-warning btn-lg" id="copy">copy</button>
+            <ul id="email-list">
+                <li class="email">
+                    <textarea class="email"></textarea>
+                    <input type="checkbox" class="valid">
+                </li>
+            </ul>
+        </div>
     </body>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstarp.min.js"></script>

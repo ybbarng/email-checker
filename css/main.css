@@ -1,0 +1,33 @@
+.center-block {
+  width: 800px;
+}
+
+#email-list {
+  height: 80vh;
+  overflow: auto;
+}
+
+#email-list li.email:before{
+  height: 100%;
+  vertical-align: middle;
+}
+
+#email-list li.email{
+  height: 30px;
+  margin-top: 10px;
+}
+
+#email-list li.email textarea {
+  height: 30px;
+  width: 600px;
+  vertical-align: middle;
+}
+
+input[type=checkbox]
+{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 0px;
+  vertical-align: middle;
+}
