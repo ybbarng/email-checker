@@ -33,10 +33,8 @@ $(function() {
 
   function getEmails() {
     var emails = '';
-    $('#email-list li.email').each(function() {
-      if ($(this).find('input.valid').prop('checked')) {
-        emails += $(this).find('textarea.email').text() + '\n';
-      }
+    $('#email-list li.pass').each(function() {
+      emails += $(this).find('textarea.email').text() + '\n';
     });
     return emails;
   }
