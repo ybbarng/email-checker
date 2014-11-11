@@ -30,6 +30,12 @@ $(function() {
 
   $('#validate').click(splitEmail());
 
+  toastr.options = {
+    'showDuration': '300',
+    'hideDuration': '1000',
+    'timeOut': '3000'
+  };
+
   ZeroClipboard.config({
     swfPath: 'ZeroClipboard.swf',
     trustedDomains: ['*']
@@ -38,5 +44,6 @@ $(function() {
   clipboardManager.on('copy', function(event) {
     var clipboard = event.clipboardData;
     clipboard.setData('text/plain', getEmails());
+    toastr.success('Copied to the clipboard');
   });
 });
