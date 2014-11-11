@@ -22,7 +22,7 @@ $(function() {
     var emails = '';
     $('#email-list li.email').each(function() {
       if ($(this).find('input.valid').val()) {
-        emails += $(this).find('textarea.email').text();
+        emails += $(this).find('textarea.email').text() + '\n';
       }
     });
     return emails;
