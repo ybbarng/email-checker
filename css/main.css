@@ -13,10 +13,10 @@
 }
 
 #email-list li.email{
-  height: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 5px;
+  display: block;
 }
 
 #email-list li.email.pass{

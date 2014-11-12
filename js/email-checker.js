@@ -31,6 +31,7 @@ $(function() {
         documentFragment.append(emails[i].getHTML());
       }
       $emailList.append(documentFragment);
+      $('textarea').elastic();
       $('input.valid').change(validbox_click);
     };
   }
@@ -61,4 +62,6 @@ $(function() {
     clipboard.setData('text/plain', getEmails());
     toastr.success('Copied to the clipboard');
   });
+
+  $('textarea').elastic();
 });
