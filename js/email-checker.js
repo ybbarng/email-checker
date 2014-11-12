@@ -20,7 +20,9 @@ $(function() {
         var value = $(this).val();
         rows = value.split('\n');
         for (var i = 0; i < rows.length; i++) {
-          emails.push(new Email(rows[i]));
+          if (rows[i] !== '') {
+            emails.push(new Email(rows[i]));
+          }
         }
       });
       $emailList.empty();
