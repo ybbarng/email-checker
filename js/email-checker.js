@@ -26,9 +26,11 @@ $(function() {
         }
       });
       $emailList.empty();
+      var documentFragment = $(document.createDocumentFragment());
       for (var i = 0; i < emails.length; i++) {
-        $emailList.append(emails[i].getHTML());
+        documentFragment.append(emails[i].getHTML());
       }
+      $emailList.append(documentFragment);
       $('input.valid').change(validbox_click);
     };
   }
