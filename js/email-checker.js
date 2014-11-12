@@ -20,8 +20,9 @@ $(function() {
         var value = $(this).val();
         rows = value.split('\n');
         for (var i = 0; i < rows.length; i++) {
-          if (rows[i] !== '') {
-            emails.push(new Email(rows[i]));
+          var row = rows[i].trim();
+          if (row !== '') {
+            emails.push(new Email(row));
           }
         }
       });
