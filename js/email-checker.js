@@ -11,6 +11,16 @@ $(function() {
     }
   }
 
+  function unique(array) {
+      var unique_array = [];
+      $.each(array, function(i, element) {
+        if ($.inArray(element, unique_array) === -1) {
+          unique_array.push(element);
+        }
+      });
+      return unique_array;
+  }
+
   function splitEmail() {
     var emails = [];
     $emailList = $('#email-list');
@@ -18,9 +28,9 @@ $(function() {
       emails = [];
       $('textarea.email').each(function() {
         var value = $(this).val();
-        rows = value.split('\n');
+        rows = unique($.map(value.split('\n'), $.trim));
         for (var i = 0; i < rows.length; i++) {
-          var row = rows[i].trim();
+          var row = rows[i];
           if (row !== '') {
             emails.push(new Email(row));
           }
